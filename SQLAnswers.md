@@ -1,6 +1,6 @@
-# Week2 - MYSQL Homework answer (1-3) + Stretch (4-7)
+# Week2 - MYSQL Homework answer (1-3) + Stretch (4-6)
 
-## Walkthrough of creating tables and inserting data including creating the database!
+## Example Walkthrough of me creating tables and inserting data including creating the database!
 
 ### create database for the shop
 	> create database shop;
