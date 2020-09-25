@@ -60,7 +60,7 @@
 	+---------+-----------+----------+-----------+-------------+
 
 
-#  SQL Query ANSWERS
+#  SQL Query ANSWERS 1-3
 
 1. The most popular product sold on a specific date.
 
@@ -73,6 +73,8 @@
 3. The most popular product sold on a specific month.
 
 	>select Product.ProductName, Sales.ProductID, Count(*) as "popularity", month(Sales.DateofSales) from Product, Sales where Sales.ProductID = Product.ProductID and month(DateofSales) = "07" group by month(DateofSales), Sales.ProductID having count(*) = (select max(r) from (select count(*) as r, ProductID from Sales where month(Dateofsales) = "07" group by DateofSales, ProductID) as myTable);
+
+#  SQL Stretch ANSWERS 4-6
 
 4. The most popular subcategory for a specific date.
 
