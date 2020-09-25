@@ -2,10 +2,10 @@
 
 ## Example Walkthrough of me creating tables and inserting data including creating the database!
 
-### create database for the shop
+### create database for the shop.
 	> create database shop;
 	> use shop
-
+### create tables for the shop.
 	>create table category (CategoryID int, CategoryName char(50));
 		>insert into Category values (1,'Food');
 	+------------+--------------+
@@ -60,8 +60,8 @@
 	+---------+-----------+----------+-----------+-------------+
 
 
-# ANSWERS
----------
+#  SQL Query ANSWERS
+
 1. The most popular product sold on a specific date.
 
 	> select product.productname, sales.productid, count(*) as popularity, sales.dateofsales from product, sales where sales.productid = product.productid and dateofsales = 20200924 group by dateofsales, sales.productID having count(*) = (select max(r) from (select count(*) as r, productid from sales group by dateofsales, productid)as mytable);
